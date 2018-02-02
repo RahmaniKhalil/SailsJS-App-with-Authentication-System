@@ -1,0 +1,60 @@
+<div class="ui hidden divider"></div>
+<div class="ui three column centered grid">
+        <div class="column">
+            <% if(flash && flash.username){ %>
+                <div class="ui positive message">
+                        <i class="close icon"></i>
+                        <div class="header">
+                          Opération terminée !
+                        </div>
+                        <p>Utilisateur <strong><%= flash.username %></strong> créé avec succés !</p>
+                </div>
+            <% } %>
+        </div>
+</div>
+<div class="ui hidden divider"></div>
+
+
+
+
+<div class="ui three column centered grid">
+    <div class="column">
+        <h2 class="ui center aligned icon header">
+            <i class="circular user icon"></i>
+            Se connecter
+        </h2>
+        <h3 class="ui red center aligned header">
+            Entrez vos informations de connection
+        </h3>
+        <div class="ui hidden divider"></div>
+
+        <form action="/user/dashboard" class="ui form signInForm">
+          <div class="field">
+              <div class="sixteen wide field">
+                <input name="username" placeholder="Utilisateur" type="text">
+              </div>
+          </div>
+          <div class="field">
+                <div class="sixteen wide field">
+                  <input name="password" placeholder="Mot de passe" type="password">
+                </div>
+          </div>
+          <div class="field">
+              <div class="two fields">
+                <div class="four wide field">
+                </div>
+                <div class="eleven wide field">
+                    <div class="ui buttons">
+                        <a class="ui button" href="/">Annuler</a>
+                        <div class="or"></div>
+                        <input class="ui positive button" type="submit" value="Se connecter" />
+                        <input type="hidden" name="_csrf" value="<%= _csrf %>" />
+                    </div>
+                </div>
+              </div>
+          </div>
+
+
+      </form>
+    </div>
+</div>

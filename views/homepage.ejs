@@ -1,0 +1,71 @@
+<!-- Default home page -->
+
+<style>
+  /* Styles included inline since you'll probably be deleting this page anyway */
+  html,body{text-align:left;font-size:1em}html,body,img,form,textarea,input,fieldset,div,p,div,ul,li,ol,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,code{margin:0;padding:0}ul,li{list-style:none}img{display:block}a img{border:0}a{text-decoration:none;font-weight:normal;font-family:inherit}*:active,*:focus{outline:0;-moz-outline-style:none}h1,h2,h3,h4,h5,h6{font-weight:normal}div.clear{clear:both}.clearfix:after{clear:both;content:".";display:block;font-size:0;height:0;line-height:0;visibility:hidden}body{font-family:"Open Sans",Arial,sans-serif;font-weight:300;}.top-bar {width: 100%; background-color: #e4f0f1; padding: 15px 0;}.top-bar .container img {float: left;}.top-bar .container ul {float: right; padding-top: 25px;}.top-bar .container li {float: left; width: 125px; text-align: center; font-size: 15px; color:#000; font-weight: 600;}.top-bar .container a li:hover {color: #118798; -webkit-transition:color 200ms; -moz-transition:color 200ms; -o-transition:color 200ms;transition:color 200ms;}
+  .container{width: 80%; max-width: 1200px; margin: auto;}
+  div.tpheader {-webkit-transition: 6s; -moz-transition: 6s; -o-transition: 6s;transition: 6s; background: rgba(4, 36, 41, 0.89) url("../assets/images/img_sailsShadow.png") no-repeat 42% bottom; padding: 100px 0 65px;}
+  .tpheader h1#main-title{color: #fff; font-weight: 300; font-size: 2.5em;}.tpheader h3{color: #b1eef7; font-style: italic; font-weight: 300;}
+  .tpheader h3 code{font-style: normal!important; background-color: rgba(255,255,255,0.5); font-weight: 300; color:#0e6471; margin: 0px 5px;}div.main.container{padding: 50px 0;}h1 {color: #118798; font-weight: 300;}
+</style>
+<script type="text/javascript">
+setTimeout(function sunrise () {
+  document.getElementsByClassName('tpheader')[0].style.backgroundColor = '#118798';
+}, 0);
+</script>
+
+<div class="default-page">
+  <div class="tpheader">
+    <h1 id="main-title" class="container">Gestion des Accès aux Sites Sécurisés</h1>
+    <h3 class="container">Vous n'avez pas un compte ? contactez nous <code>contact@gass.ma</code></h3>
+  </div>
+  <div class="ui hidden divider"></div>
+  <div class="ui container">
+    <div class="ui equal width grid">
+        <div class="column">
+          <div class="ui card">
+            <div class="content">
+              <div class="header">Ajouter un utilisateur</div>
+              <div class="description">
+                Vous devez avoir le code d'ajout pour pouvoir ajouter un utilisateur.
+              </div>
+            </div>
+            <div class="ui bottom attached positive button">
+              <i class="user add icon"></i>
+              <a style="color:#e4f0f1" href="/user/register">Ajouter</a>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="ui card">
+            <div class="content">
+              <div class="header">Authentification</div>
+              <div class="description">
+                Vous êtes Utilisateur ?  connectez-vous, et gérez votre activité
+              </div>
+            </div>
+            <div class="ui bottom attached teal button">
+              <i class="sign in icon"></i>
+              <a style="color:#e4f0f1" href="/user/login">Se connecter</a>              
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="ui card">
+            <div class="content">
+              <div class="header">Contact</div>
+              <div class="description">
+                Vous avez un problème ? Envoyez un mail à l'équipe support
+              </div>
+            </div>
+            <div class="ui bottom attached red button">
+              <i class="send icon"></i>
+              <a style="color:#e4f0f1" href="/user/contact">Contactez nous</a>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+

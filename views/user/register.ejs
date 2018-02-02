@@ -1,0 +1,90 @@
+
+<div class="ui hidden divider"></div>
+<div class="ui three column centered grid">
+        <div class="column">
+            <% if(flash && flash.err){ %>
+                <div class="ui negative message">
+                        <i class="close icon"></i>
+                        <div class="header">
+                          Informations invalides ou incomplètes !
+                        </div>
+                        <p>Veuillez saisir des informations valides</p>
+                </div>
+            <% } %>
+        </div>
+</div>
+
+
+<div class="ui hidden divider"></div>
+
+<div class="ui three column centered grid">
+    <div class="column">
+        <h2 class="ui center aligned icon header">
+            <i class="circular user add icon"></i>
+            Ajouter un utilisateur
+          </h2>
+          <h3 class="ui red center aligned header">
+              Vous aurez besoin d'une clé secrète
+          </h3>
+        <div class="ui hidden divider"></div>
+        <form action="/user/create" class="ui form addUserForm">
+            <div class="field">
+                <div class="two fields">
+                  <div class="field">
+                    <input name="fullname" placeholder="Nom Complet" type="text">
+                  </div>
+                  <div class="field">
+                    <input name="username" placeholder="Nom Utilisateur" type="text">
+                  </div>
+                </div>
+            </div>
+            <div class="field">
+                <div class="two fields">
+                  <div class="field">
+                        <div id="position-select" class="ui selection select dropdown">
+                            <input name="position" type="hidden">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">Position</div>
+                            <div class="menu">
+                                <div class="item" data-value="Agent">Agent</div>
+                                <div class="item" data-value="Client">Client</div>
+                                <div class="item" data-value="Admin">Admin</div>
+                            </div>
+                        </div>
+                  </div>
+                  <div class="field">
+                    <input name="password" placeholder="Mot de passe" type="password">
+                  </div>
+                </div>
+            </div>
+            <div class="field">
+                <div class="two fields">
+                  <div class="eleven wide field">
+                    <input name="email" placeholder="E-mail" type="email">
+                  </div>
+                  <div class="five wide field">
+                    <input name="secretkey" placeholder="Clé secrète" type="password">
+                    <input id="accesskey" name="accesskey" value="VP_KA" type="hidden">
+                  </div>
+                </div>
+            </div>
+            <div class="field">
+                <div class="two fields">
+                  <div class="four wide field">
+                  </div>
+                  <div class="eleven wide field">
+                      <div class="ui buttons">
+                          <a class="ui button" href="/">Cancel</a>
+                          <div class="or"></div>
+                          <input class="ui positive button" type="submit" value="Enregistrer" />
+                          <input type="hidden" name="_csrf" value="<%= _csrf %>" />
+                      </div>
+                  </div>
+                </div>
+            </div>
+ 
+
+        </form>
+    </div>
+</div>
+
